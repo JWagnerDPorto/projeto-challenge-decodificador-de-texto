@@ -1,0 +1,28 @@
+:root {
+    --cor-primaria: #E5E5E5;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #22D4FD;
+    --cor-hover: #272626;
+
+    --fonte-primaria: "Inter", sans-serif;
+    --fonte-secundaria: ;
+}
+
+/*
+.inter-<uniquifier> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+*/
+
+* {
+    background-color: var(--cor-primaria);
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    margin: 0;
+    padding: 0;
+}
