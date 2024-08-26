@@ -1,28 +1,177 @@
+/* Definição das cores e fontes principais */
 :root {
     --cor-primaria: #E5E5E5;
-    --cor-secundaria: #F6F6F6;
-    --cor-terciaria: #22D4FD;
-    --cor-hover: #272626;
+    --cor-secundaria: #0A3871;
+    --cor-terciaria: #ffffff;
+    --cor-quaternaria: #d3d3d3;
 
-    --fonte-primaria: "Inter", sans-serif;
-    --fonte-secundaria: ;
+    --fonte-primaria: 'Montserrat', sans-serif;
 }
 
-/*
-.inter-<uniquifier> {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-*/
-
+/* Estilos globais para todos os elementos */
 * {
-    background-color: var(--cor-primaria);
     font-family: var(--fonte-primaria);
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 150%;
+    background-color: var(--cor-primaria);
     margin: 0;
     padding: 0;
+
+}
+
+/* Estilo do logotipo no cabeçalho */
+.cabecalho__logo {
+  margin-left: 5px;
+  padding-top: 5px;
+  width: 2rem;
+}
+
+/* Estilo do container principal do encriptador */
+.conteudo-principal {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+/* Estilo das seções de conteúdo dentro do encriptador */
+.encriptador {
+  width: 45%;
+}
+
+
+/* Estilo da caixa de texto onde o usuário digita */
+.encriptador__conteudo__texto {
+  background: var(--cor-terciaria);
+  border: none;
+  border-radius: 24px;
+  color: var(--cor-secundaria);
+  text-transform: lowercase;
+  font-size: 2rem;
+  padding-top:2rem;
+  text-align: center;
+  height: 25rem;
+  width: 100%;
+  
+}
+
+/* Estilo do texto placeholder */
+::placeholder {
+  color: var(--cor-quaternaria);
+  font-size: 2rem;
+}
+
+/* Remove o contorno padrão quando a caixa de texto está em foco */
+.encriptador__conteudo__texto:focus {
+    outline: none;
+}
+
+/* Estilo da caixa de texto onde a mensagem criptografada/descriptografada aparece */
+.encriptador__conteudo__mensagem {
+  background: var(--cor-terciaria) url(/assets/cadeado.png) no-repeat center;
+  border: none;
+  border-radius: 24px;
+  color: var(--cor-secundaria);
+  font-size: 2rem;
+  padding-top:2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  height: 25rem;
+  width: 100%;
+  
+}
+
+/* Remove o contorno padrão quando a caixa de mensagem está em foco */
+.encriptador__conteudo__mensagem:focus {
+  outline: none;
+}
+
+/* Classe para esconder a imagem de fundo quando o usuário digita */
+.encriptador__conteudo__mensagem--sem-imagem {
+  background-image: none;
+}
+
+/* Estilo do container de botões */
+.encriptador__conteudo__botoes {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+/* Estilo dos botões de criptografar, descriptografar e copiar */
+
+.encriptador__conteudo__botoes__criptrografar,
+.encriptador__conteudo__botoes__descriptrografar,
+.encriptador__conteudo__botoes__copiar {
+  background-color: var(--cor-secundaria);
+  border: 1px solid var(--cor-secundaria);
+  border-radius: 24px;
+  color: var(--cor-primaria);
+  font-size: 1rem;
+  cursor: pointer;
+  height: 4rem;
+  margin-top: 3.3rem;
+  width: 21rem;
+}
+
+
+/* Estilo para o feedback visual dos botões */
+
+.encriptador__conteudo__botoes__criptrografar:hover,
+.encriptador__conteudo__botoes__descriptrografar:hover,
+.encriptador__conteudo__botoes__copiar:hover {
+  background-color:var(--cor-terciaria);
+  color:var(--cor-secundaria);
+}
+
+
+/* Estilo do texto informativo abaixo da caixa de texto */
+
+.encriptador__conteudo__informacao {
+  display: flex;
+  justify-content:baseline;
+  
+}
+
+.encriptador__conteudo__informacao h6{
+  color: var(--cor-secundaria);
+  font-size: 1rem;
+  height: 2rem;
+}
+
+/* Estilo do rodapé */
+
+.rodape {
+  padding-top: 3.3rem;
+  width: 100%;
+}
+
+.rodape__texto {
+  background-color: var(--cor-secundaria);
+  text-align:center;
+  padding: 1rem;
+  color: var(--cor-primaria);
+}
+
+@media (max-width:450px),(max-width:1200px) {
+
+  .conteudo-principal {
+    flex-direction: column;
+      padding: 5%;
+      width: 100%;
+  }
+
+  .encriptador {
+    width: 90%;
+  }
+
+  .encriptador__conteudo__mensagem {
+    margin-top: 3rem;
+  }
+
+
+}
+
+@media (min-width:1370px) {
+
+  .rodape {
+    padding-top: 18.7rem;
+  }
 }

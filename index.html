@@ -15,22 +15,26 @@
         <img class="cabecalho__logo" src="assets/logoAlura.png" alt="Logo da Alura">
     </header>
 
-    <main class="encriptador">
-        <section class="encriptador__conteudo">
-            <textarea class="encriptador__conteudo__adicionar-texto" name="" id="" cols="41" rows="4"></textarea>
+    <main class="conteudo-principal">
+        <section class="encriptador">
+            <textarea class="encriptador__conteudo__texto" placeholder="Digite seu texto ..." name="textoEntrada" id="textoEntrada" cols="41" rows="4"></textarea>
             <div class="encriptador__conteudo__informacao">
+                <img src="assets/icone.svg" alt="icone">
                 <h6>Apenas letras minúsculas e sem acento.</h6>
             </div>
 
             <div class="encriptador__conteudo__botoes">
-                <button class="encriptador__conteudo__botoes__criptrografar">Criptografar</button>
-                <button class="encriptador__conteudo__botoes__descriptrografar">Descriptografar</button>
+                <button class="encriptador__conteudo__botoes__criptrografar" onclick="criptografarTexto()">Criptografar</button>
+                <button class="encriptador__conteudo__botoes__descriptrografar" onclick="descriptografarTexto()">Descriptografar</button>
             </div>
         </section>
 
-        <section class="encriptador__conteudo">
-            <textarea class="encriptador__conteudo__mensagem" name="" id="" cols="20" rows="10"></textarea>
-            <button class="encriptador__conteudo__botoes__copiar">Copiar</button>
+        <section class="encriptador">
+            <textarea class="encriptador__conteudo__mensagem"  placeholder="Digite um texto que você deseja criptografar ou descriptografar." id="mensagemSaida" name="mensagemSaida"  cols="20" rows="10"></textarea>
+
+            <div  class="encriptador__conteudo__botoes">
+                <button class="encriptador__conteudo__botoes__copiar" onclick="copiarTexto()">Copiar</button>
+            </div>
         </section>
     </main>
 
@@ -38,5 +42,6 @@
         <p class="rodape__texto">Desenvolvido por José Wagner Dutra Porto</p>
     </footer>
     
+    <script src="script.js"></script>
 </body>
 </html>
