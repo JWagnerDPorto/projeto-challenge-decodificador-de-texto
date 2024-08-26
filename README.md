@@ -28,6 +28,7 @@ Este projeto tem como objetivo fornecer uma aplicação web simples para criptog
 3. **Obtenha o resultado:** O texto criptografado/descriptografado será exibido automaticamente.
 4. **Copie o resultado:** Clique no botão "Copiar" para copiar o texto para a área de transferência.
 
-**Link do projeto no Git Pages**
+**Link do projeto no Vercel e Git Pages**
 
 https://projeto-challenge-decodificador-de-texto.vercel.app/
+https://jwagnerdporto.github.io/projeto-challenge-decodificador-de-texto/
