@@ -31,4 +31,5 @@ Este projeto tem como objetivo fornecer uma aplicação web simples para criptog
 **Link do projeto no Vercel e Git Pages**
 
 https://projeto-challenge-decodificador-de-texto.vercel.app/
+
 https://jwagnerdporto.github.io/projeto-challenge-decodificador-de-texto/
